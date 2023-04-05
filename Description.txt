@@ -1,0 +1,12 @@
+This Python program uses the OpenCV library and pytesseract OCR engine to detect text from an image. The program reads an image file from a specified path and converts it into a grayscale image. 
+It then applies dilation and erosion filters to the image to remove any unwanted noise.
+The filtered image is then thresholded using an adaptive Gaussian filter to convert it into a binary image.
+The program then passes the binary image to pytesseract OCR engine to extract the text from the image.
+If text is detected, it is displayed in a label. The program also includes a button that triggers the text detection process
+
+There are several limitations to this program :
+
+1. Image quality: The program heavily relies on the quality of the input image. If the image is blurry or has low contrast, the program may not be able to detect the text accurately
+2. Text orientation: The program assumes that the text in the image is oriented horizontally. If the text is vertical or at an angle, the program may not be able to detect it accurately
+3. Language: The program uses the default language model for text recognition, which may not work well for languages other than English.
+4. Performance: The program may be slow when processing large or complex images, which may affect its usability for real-time or time-critical applications.
