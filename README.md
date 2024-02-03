@@ -1,18 +1,58 @@
-# Text_Detection
-The objective of this project is to develop a Python program that can detect captcha texts from an image using OpenCV and Pytesseract with Tesseract OCR. Captchas can sometimes be a hindrance for users who struggle to read distorted text. The project aims to create a solution to this problem by developing a program that can detect captcha texts from an image and display it in a clear and readable format. The program will use OpenCV to pre-process the image and extract the captcha text. Pytesseract with Tesseract OCR will then be used to recognize the extracted text.
+# Text Detection using OpenCV and Tesseract
 
-The Program will consist of the following steps:  
+## Contents
 
-1.	Implement a user interface feature to select an image file
-2.	Load the captcha image into the program using OpenCV
-3.	Pre-process the image using OpenCV and PIL techniques such as thresholding, erosion, and dilation to remove noise and enhance the captcha text
-4.	Use Pytesseract with Tesseract OCR to recognize the captcha text from the pre-processed image
-5.	Display the recognized captcha text in a clear and readable format 
+1. [Overview](#overview)
+2. [Description](#description)
+3. [Installation](#installation)
+4. [Usage](#usage)
 
-There are several limitations to this program :
+## Overview
 
-1. Image quality: The program heavily relies on the quality of the input image. If the image is blurry or has low contrast, the program may not be able to detect the text accurately
-2. Text orientation: The program assumes that the text in the image is oriented horizontally. If the text is vertical or at an angle, the program may not be able to detect it accurately
-3. Language: The program uses the default language model for text recognition, which may not work well for languages other than English.
-4. Performance: The program may be slow when processing large or complex images, which may affect its usability for real-time or time-critical applications.
+This project demonstrates text detection in images using OpenCV and Tesseract. It provides a graphical user interface (GUI) built with Tkinter for easy interaction.
 
+## Description
+
+The application uses OpenCV to preprocess the image by converting it to grayscale, applying morphological transformations, and performing adaptive thresholding. The preprocessed image is then passed to Tesseract OCR for text extraction.
+
+The Tkinter-based GUI provides a user-friendly interface for selecting images and initiating text detection.
+
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/your_username/Text-Detection.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd Text-Detection
+    ```
+
+3. Install the required dependencies:
+
+    ```bash
+    pip install opencv-python numpy Pillow pytesseract
+    ```
+
+    Ensure that Tesseract OCR is installed on your system. You can download it from [https://github.com/tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract).
+
+4. Run the application:
+
+    ```bash
+    python Text_Detection.py
+    ```
+
+## Usage
+
+1. Launch the application.
+
+2. Select an image file (supported formats: jpg, jpeg, png, bmp) for text detection using the file dialog.
+
+3. The GUI displays the image and provides a button to perform text detection.
+
+4. Click the "Detect Text" button.
+
+5. The detected text will be printed to the console, and a label with the detected text will be displayed on the GUI.
